@@ -1,0 +1,2 @@
+#!/bin/sh
+gcc vie_sdl.c -Wall -lSDLmain -lSDL -lSDL_ttf -o vie_sdl

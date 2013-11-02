@@ -1,0 +1,8 @@
+Jeu de la vie
++ Taille de la surface choisie à l'éxecution
++ Zoomer dans la surface
+- Choisir la surface initiale parmi des figures prédéfinies
+- Dessiner en temps réel dans la surface
++ Mettre en pause la simulation
+- Choisir la vitesse de la simulation
+- Enregistrer la simulation à n'importe quel moment
