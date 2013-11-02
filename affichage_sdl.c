@@ -41,6 +41,12 @@ void drawSquareAbsolute(SDL_Surface *screen, int coteBloc, int x, int y)
 	SDL_FreeSurface(carre);
 }
 
+/** Dessine la grille de jeu
+ * screen : Surface qui accueille la grille
+ * coteBloc : largeur d'une maille de la grille
+ * x, y : Bord supérieur gauche de la grille
+ * w, h : Nombre de cases en largeur/hauteur
+ **/
 void drawGrid(SDL_Surface *screen, int coteBloc, int x, int y, int w, int h)
 {
 	int i, j;
@@ -97,7 +103,11 @@ void initSDL(SDL_Surface **ptr_screen, TTF_Font **ptr_police, int w, int h)
 
 	/*************************** Initialisation SDL	***************************/ 
 }
-
+/** Dessine la surface de jeu sur screen
+ * screen : Surface où dessiner
+ * sim : Surface à dessiner
+ * grid : Dessine la grille si vrai
+ **/
 void drawGameMatrix(SDL_Surface *screen, Simulation *sim, int grid)
 {
 	int x = 0, y = 0, i, j;
@@ -117,8 +127,12 @@ void drawGameMatrix(SDL_Surface *screen, Simulation *sim, int grid)
 			}
 		}
 	}
+	
 	if(grid)
+	{
 		drawGrid(screen, sim->largeurCase, xCoin, yCoin, sim->nbCasesX, sim->nbCasesY);
+		drawGrid(screen, sim->nbCasesX*sim->largeurCase/sqrt(sim->nbThread), xCoin, yCoin, sqrt(sim->nbThread), sqrt(sim->nbCasesY));
+	}
 }
 
 

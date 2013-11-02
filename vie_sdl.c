@@ -158,13 +158,10 @@ int main(int argc, char **argv)
 		/// Dessine les carrés et la grille sur la surface du jeu
 		drawGameMatrix(screen, &sim, grid);
 			
-		
 		/// Ecrit les infos
 		sprintf(infos, "dispX = %d dispY = %d", sim.dispX, sim.dispY);
 		text = TTF_RenderText_Blended(police, infos, couleurBlanche);
 		SDL_BlitSurface(text,NULL, screen, NULL);
-
-
 		
 		// Change le buffer de travail
 		if(!sim.pause)

@@ -8,6 +8,7 @@ int initSimulation(Simulation *sim, int nbCasesX, int nbCasesY)
 	sim->nbCasesY = nbCasesY;
 	sim->pause = 0;
 	sim->largeurCase = 10;
+	sim->nbThread = 8;
 	
 	sim->dispX = (sim->nbCasesX*sim->largeurCase)/2;
 	sim->dispY = (sim->nbCasesY*sim->largeurCase)/2;
